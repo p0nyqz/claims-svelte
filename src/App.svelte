@@ -1,33 +1,15 @@
 <script>
+  import Table from "./components/Table.svelte";
+  import DataLoader from "./components/DataLoader.svelte";
+
   let users = [
     { id: 1, name: 'John Doe', email: 'john@example.com' },
-    { id: 2, name: 'Jane Smith', email: 'jane@example.com' },
-    { id: 3, name: 'Alice Johnson', email: 'alice@example.com' }
+	  { id: 2, name: 'Jane Smith', email: 'jane@example.com' },
+	  { id: 3, name: 'Alice Johnson', email: 'alice@example.com' }
   ];
 </script>
 
-<style>
-  table {
-    width: 100%;
-    border-collapse: collapse;
-		/* border-radius: 10px; */
-		/* border: 1px solid #dddddd; */
-		/* overflow: hidden; */
-  }
-
-  th, td {
-    border: 1px solid #dddddd;
-    padding: 8px;
-    text-align: left;
-		/* border-radius: 0; сбрасываем скругление для ячеек */
-  }
-
-  th {
-    background-color: #f2f2f2;
-		/* border-radius: 10px 10px 0 0; скругляем верхние углы заголовков */
-  }
-</style>
-
+<Table />
 <table>
   <thead>
     <tr>
@@ -46,5 +28,10 @@
     {/each}
   </tbody>
 </table>
+
+<main>
+  <h1>Data Table Example</h1>
+  <DataLoader />
+</main>
 
 <pre>{JSON.stringify(users, null, 2)}</pre>
