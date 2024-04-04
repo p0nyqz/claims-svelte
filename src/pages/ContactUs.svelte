@@ -1,6 +1,6 @@
 <!-- src/pages/ContactUs.svelte -->
 <script>
+   import Content from "../layouts/Content.svelte";
 </script>
 
-<h1>Contact Us</h1>
-
+<Content pageTitle="Contact Us"></Content>

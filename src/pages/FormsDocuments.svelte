@@ -1,6 +1,7 @@
-<!-- src/pages/Home.svelte -->
+<!-- src/pages/Forms&Documents.svelte -->
 <script>
-
+  import Content from "../layouts/Content.svelte";
 </script>
 
-<h1>Forms & Documents</h1>
+<Content pageTitle="Forms & Documents">
+</Content>

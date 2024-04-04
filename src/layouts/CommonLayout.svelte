@@ -4,30 +4,15 @@
   import Content from "./Content.svelte";
 
   // export let title; // заголовок страницы
+  export let pageTitle = '';
 </script>
 
-<!-- <main>
+<main id="app">
   <Nav />
-  <Content pageTitle="Example Page">
-    <p>Это содержимое страницы</p>
-  </Content>
-</main> -->
-<Nav />
-<Content />
-
-<main>
-  <!-- <h1>{title}</h1> -->
-  <slot></slot>
+  <Content {pageTitle}/>
 </main>
 
 <style>
-  main {
-    margin: 20px;
-  }
-
-  .content {
-    /* margin-left: 250px; Отступ контента справа от навигации */
-  }
 </style>
 
 

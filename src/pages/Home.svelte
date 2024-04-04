@@ -1,5 +1,7 @@
 <!-- src/pages/Home.svelte -->
 <script>
+  import Content from "../layouts/Content.svelte";
 </script>
 
-<h1>Home</h1>
+<Content pageTitle="Home">
+</Content>

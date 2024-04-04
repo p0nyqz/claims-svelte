@@ -1,7 +1,9 @@
-<!-- src/pages/Home.svelte -->
+<!-- src/pages/FindAProvider.svelte -->
 <script>
+  import Content from "../layouts/Content.svelte";
   import DataLoader from "../components/DataLoader.svelte";
 </script>
 
-<h1>Find Provider</h1>
-<DataLoader></DataLoader>
+<Content pageTitle="Find Provider">
+  <DataLoader></DataLoader>
+</Content>

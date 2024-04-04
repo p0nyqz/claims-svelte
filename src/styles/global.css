@@ -1,4 +1,4 @@
-@import 'variables.css';
+/* @import 'variables.css'; */
 
 a {
   /* color: var(--text-color); */
@@ -33,6 +33,12 @@ li:hover {
 /* Content */
 .content {
   margin-left: 250px; /* Отступ контента справа от навигации */
+  transition: transform 0.3s ease;
+}
+
+/* Смещение контента влево, когда навигация смещена */
+.navigation.collapsed + .content {
+  transform: translateX(-200px); /* Смещаем контент влево на ширину навигации */
 }
 
 /* Navigation */
@@ -48,6 +54,7 @@ li:hover {
   width: 200px;
   height: 100%;
   padding: 20px;
+  /* border-radius: 16px; */
   background-color: #f0f0f0;
   transition: transform 0.3s ease; /* Применяем анимацию к свойству transform */
 }
@@ -58,14 +65,17 @@ li:hover {
   ); /* Сдвигаем навигацию влево за пределы экрана */
 }
 
+
 .navigation-item {
-  color: red; /* Add margin to the right of the icon */
+  color: var(--text-color) !important;/* Add margin to the right of the icon */
 }
 
 /* Style for icons */
 .navigation-item i {
   margin-right: 5px; /* Add margin to the right of the icon */
 }
+
+
 
 /* Toggle button */
 .toggle-button {
@@ -91,4 +101,25 @@ li:hover {
   vertical-align: baseline;
   color: red; /* Цвет иконки */
   /* Другие стили */
+}
+
+main {
+  max-width: 1200px;  Максимальная ширина контента */
+  margin: 0 auto; /* Центрирование контента */
+  padding: 20px; Отступы вокруг контента
+}
+
+h1 {
+  font-size: 24px; /* Размер заголовка */
+  margin-bottom: 20px; /* Отступ после заголовка */
+}
+
+/* Content styles */
+section {
+  /* Отступ контента справа от навигации */
+  margin-left: 250px;
+  /* Ширина контента = 100% - отрицательный margin-left */
+  width: calc(100% - 250px);
+  /* Применяем анимацию для смещения контента влево при смещении навигации */
+  transition: margin-left 0.3s ease;
 }

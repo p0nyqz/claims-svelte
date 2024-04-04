@@ -89,17 +89,16 @@
   }
 
   /* Стили для dark mode */
-  .dark-mode {
-    /* Ваши стили для dark mode */
+  /* .dark-mode {
     background-color: #333;
     color: #fff;
-  }
+  } */
 </style>
 
 <div class="switch-container">
   <span class="switch-label">Dark mode:</span>
   <label class="switch">
-    <input type="checkbox" bind:checked={isDarkMode} on:change={toggleDarkMode}>
+    <input type="checkbox" id="darkdome" name="darkmode" bind:checked={isDarkMode} on:change={toggleDarkMode}>
     <span class="slider"></span>
   </label>
 </div>
