@@ -16,9 +16,13 @@
     "rollup-plugin-css-only": "^4.3.0",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-svelte": "^7.1.2",
-    "svelte": "^3.55.0"
+    "svelte": "^4.2.12",
+    "svelte-feather-icons": "^4.1.0"
   },
   "dependencies": {
-    "sirv-cli": "^2.0.0"
+    "@sveltejs/vite-plugin-svelte": "^3.0.0",
+    "feather-icons": "^4.29.1",
+    "sirv-cli": "^2.0.0",
+    "svelte-routing": "^2.12.0"
   }
 }

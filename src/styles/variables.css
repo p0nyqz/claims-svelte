@@ -1,0 +1,10 @@
+/* Colors */
+
+:root {
+  --primary-color: #007bff; /* Основной цвет */
+  --secondary-color: #6c757d; /* Вторичный цвет */
+  --accent-color: #ffc107; /* Акцентный цвет */
+
+  --navbg-color: rgb(249, 249, 249);
+  --text-color: rgb(20, 20, 20);
+}

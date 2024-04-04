@@ -1,4 +1,94 @@
-:root {
-  --primary-color: #007bff;
-  --secondary-color: #6c757d;
+@import 'variables.css';
+
+a {
+  /* color: var(--text-color); */
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* 100% высоты контейнера навигации */
+}
+
+li {
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  /* height: 100%; 100% высоты родительского элемента (списка ul) */
+}
+
+li:hover {
+  background-color: #ddd;
+}
+
+/* Content */
+.content {
+  margin-left: 250px; /* Отступ контента справа от навигации */
+}
+
+/* Navigation */
+
+.navigation-container {
+  display: flex;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  padding: 20px;
+  background-color: #f0f0f0;
+  transition: transform 0.3s ease; /* Применяем анимацию к свойству transform */
+}
+
+.navigation.collapsed {
+  transform: translateX(
+    -200px
+  ); /* Сдвигаем навигацию влево за пределы экрана */
+}
+
+.navigation-item {
+  color: red; /* Add margin to the right of the icon */
+}
+
+/* Style for icons */
+.navigation-item i {
+  margin-right: 5px; /* Add margin to the right of the icon */
+}
+
+/* Toggle button */
+.toggle-button {
+  position: fixed;
+  background-color: var(--navbg-color);
+  border: none;
+  color: #333;
+  cursor: pointer;
+  padding: 10px;
+  /* margin-left: -20px; */
+  z-index: 999; /* Поместите кнопку поверх остального контента */
+  top: 0;
+  left: 250px; /* Расположение кнопки справа от навигации */
+  transition: left 0.3s ease; /* Применяем анимацию к свойству left */
+}
+
+.navigation.collapsed + .toggle-button {
+  left: 0; /* Сдвигаем кнопку влево при скрытии навигации */
+}
+
+.material-icons {
+  font-size: 16px; /* Размер иконки */
+  vertical-align: baseline;
+  color: red; /* Цвет иконки */
+  /* Другие стили */
 }
